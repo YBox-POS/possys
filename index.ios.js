@@ -4,5 +4,5 @@
  * @flow
  */
 import {AppRegistry} from 'react-native';
-import main from './js/main';
+import main from './src/modules/product/product';
 AppRegistry.registerComponent('possystem', () => main);

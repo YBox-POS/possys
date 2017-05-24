@@ -7,21 +7,21 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 // import oop from '../src/modules/duck/actions';
-import {quack,swim,reset} from '../src/modules/product/redux/widgets';
+import {quack,swim,reset} from '../src/modules/duck/widgets';
 
-console.log(">>>>>>>>auth oop|||||>>>>"+quack());
+console.log(">>>>>>>>auth oop|||||>>>>"+quack);
 class Home extends Component {
   _onPressReset() {
     
-    this.props.dispatch(reset());
+    this.props.dispatch(reset);
   }
 
   _onPressInc() {
-    this.props.dispatch(quack());
+    this.props.dispatch(quack);
   }
 
   _onPressDec() {
-    this.props.dispatch(swim());
+    this.props.dispatch(swim);
   }
 
 
