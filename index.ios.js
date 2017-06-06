@@ -3,7 +3,7 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-import {AppRegistry,View, Image, Dimensions} from 'react-native';
+import {AppRegistry,View, Image, Dimensions,Text} from 'react-native';
 import main from './src/modules/product/product';
 import React from 'react';
 import { DrawerNavigator, DrawerItems } from 'react-navigation';
@@ -12,6 +12,9 @@ import { Icon } from 'react-native-elements';
 
 import Home from './src/draws/home';
 import Navtest from './src/draws/drawtest';
+import Draw2 from './src/draws/drawtest2';
+import Draw3 from './src/draws/drawtest3';
+
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -20,7 +23,7 @@ const CustomDrawerContentComponent = props => (
     <View
       style={{ marginTop: 40, justifyContent: 'center', alignItems: 'center' }}
     >
-  
+  <Text>用户图标</Text>
     </View>
     <DrawerItems {...props} />
   </View>
@@ -35,6 +38,14 @@ const MainRoot = DrawerNavigator(
     Navtest:{
       path:'/drawtest',
       screen:Navtest,
+    },
+    Draw2:{
+      path:'/drawtest2',
+      screen:Draw2,
+    },
+    Draw3:{
+      path:'/drawtest3',
+      screen:Draw3,
     }
   },
   {
