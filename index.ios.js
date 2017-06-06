@@ -7,7 +7,7 @@ import {AppRegistry,View, Image, Dimensions,Text} from 'react-native';
 import main from './src/modules/product/product';
 import React from 'react';
 import { DrawerNavigator, DrawerItems } from 'react-navigation';
-import { Icon } from 'react-native-elements';
+import { Icon ,Avatar} from 'react-native-elements';
 
 
 import Home from './src/draws/home';
@@ -17,13 +17,20 @@ import Draw3 from './src/draws/drawtest3';
 
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
+const Avatar_Image = require('./src/images/avaimage.png');
+
 
 const CustomDrawerContentComponent = props => (
   <View style={{ flex: 1, backgroundColor: '#43484d' }}>
     <View
-      style={{ marginTop: 40, justifyContent: 'center', alignItems: 'center' }}
-    >
-  <Text>用户图标</Text>
+      style={{ marginTop: 20,marginBottom:10, justifyContent: 'center', alignItems: 'center' }}>
+      <Avatar
+        medium
+        rounded
+        source={Avatar_Image}
+        onPress={() => console.log("=>>>>> Avatar Works!")}
+        activeOpacity={0.7}
+      />
     </View>
     <DrawerItems {...props} />
   </View>

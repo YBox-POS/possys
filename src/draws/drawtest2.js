@@ -17,7 +17,8 @@ const drawtest2Item = StackNavigator(
             size={30}
             type="material-community"
             onPress = {() => navigation.navigate('DrawerOpen')}
-        />)
+        />
+        )
       })
     },
   },
