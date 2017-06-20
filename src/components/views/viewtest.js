@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { View, ScrollView, StyleSheet, Platform } from 'react-native';
+import { View, ScrollView, StyleSheet, Platform,Text } from 'react-native';
 
-import { Text, Button, Icon, SocialIcon, Card } from 'react-native-elements';
 
 
 

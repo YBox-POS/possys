@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 // import oop from '../src/modules/duck/actions';
-import {quack,swim,reset} from '../src/modules/duck/widgets';
+import {quack,swim,reset} from './widgets';
 
 console.log(">>>>>>>>auth oop|||||>>>>"+quack);
 class Home extends Component {

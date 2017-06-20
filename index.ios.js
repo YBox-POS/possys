@@ -10,14 +10,14 @@ import { DrawerNavigator, DrawerItems } from 'react-navigation';
 import { Icon ,Avatar} from 'react-native-elements';
 
 
-import Home from './src/draws/home';
-import Navtest from './src/draws/drawtest';
-import Draw2 from './src/draws/drawtest2';
-import Draw3 from './src/draws/drawtest3';
+import Home from './src/components/draws/home';
+import Navtest from './src/components/draws/drawtest';
+import Draw2 from './src/components/draws/drawtest2';
+import Draw3 from './src/components/draws/drawtest3';
 
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
-const Avatar_Image = require('./src/images/avaimage.png');
+const Avatar_Image = require('./src/assets/images/avaimage.png');
 
 
 const CustomDrawerContentComponent = props => (
@@ -68,7 +68,7 @@ const MainRoot = DrawerNavigator(
         marginLeft: 0,
       },
     },
-    drawerWidth: SCREEN_WIDTH * 0.2,
+    drawerWidth: SCREEN_WIDTH * 0.4,
     contentComponent: CustomDrawerContentComponent,
   }
 );

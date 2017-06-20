@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 // import oop from '../src/modules/duck/actions';
-import {quack,swim,reset} from '../src/modules/product/redux/widgets';
+import {quack,swim,reset} from '../src/modules/product/widgets';
 // import ScrollableTabView, {DefaultTabBar, } from 'react-native-scrollable-tab-view';
 import { Card, ListItem, Button ,Icon,Grid, Col, Row,List,SideMenu} from 'react-native-elements'
 // import Drawer from 'react-native-drawer-menu';

@@ -3,51 +3,74 @@
  * https://github.com/facebook/react-native
  * @flow
  */
+import {AppRegistry,View, Image, Dimensions,Text} from 'react-native';
+import main from './src/modules/product/product';
+import React from 'react';
+import { DrawerNavigator, DrawerItems } from 'react-navigation';
+import { Icon ,Avatar} from 'react-native-elements';
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
 
-export default class possystem extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
+import Home from './src/draws/home';
+import Navtest from './src/draws/drawtest';
+import Draw2 from './src/draws/drawtest2';
+import Draw3 from './src/draws/drawtest3';
+
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
+const Avatar_Image = require('./src/images/avaimage.png');
+
+
+const CustomDrawerContentComponent = props => (
+  <View style={{ flex: 1, backgroundColor: '#43484d' }}>
+    <View
+      style={{ marginTop: 20,marginBottom:10, justifyContent: 'center', alignItems: 'center' }}>
+      <Avatar
+        medium
+        rounded
+        source={Avatar_Image}
+        onPress={() => console.log("=>>>>> Avatar Works!")}
+        activeOpacity={0.7}
+      />
+    </View>
+    <DrawerItems {...props} />
+  </View>
+);
+
+const MainRoot = DrawerNavigator(
+  {
+    Home: {
+      path: '/home',
+      screen: Home,
+    },
+    Navtest:{
+      path:'/drawtest',
+      screen:Navtest,
+    },
+    Draw2:{
+      path:'/drawtest2',
+      screen:Draw2,
+    },
+    Draw3:{
+      path:'/drawtest3',
+      screen:Draw3,
+    }
+  },
+  {
+    initialRouteName: 'Home',
+   
+    contentOptions: {
+      activeTintColor: '#548ff7',
+      activeBackgroundColor: 'transparent',
+      inactiveTintColor: '#ffffff',
+      inactiveBackgroundColor: 'transparent',
+      labelStyle: {
+        fontSize: 15,
+        marginLeft: 0,
+      },
+    },
+    drawerWidth: SCREEN_WIDTH * 0.4,
+    contentComponent: CustomDrawerContentComponent,
   }
-}
+);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('possystem', () => possystem);
+AppRegistry.registerComponent('possystem', () => MainRoot);

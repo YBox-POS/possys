@@ -1,6 +1,5 @@
 import React,{ Component } from 'react';
-import { ScrollView, View, Platform } from 'react-native';
-import { PricingCard,Text } from 'react-native-elements';
+import { ScrollView, View, Platform ,Text} from 'react-native';
 
 
 class viewtest3 extends Component{
