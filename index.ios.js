@@ -10,10 +10,10 @@ import { DrawerNavigator, DrawerItems } from 'react-navigation';
 import { Icon ,Avatar} from 'react-native-elements';
 
 
-import Home from './src/components/draws/home';
-import Navtest from './src/components/draws/drawtest';
-import Draw2 from './src/components/draws/drawtest2';
-import Draw3 from './src/components/draws/drawtest3';
+import Home from './src/components/navigation/draws/home';
+import Navtest from './src/components/navigation/draws/drawtest';
+import Draw2 from './src/components/navigation/draws/drawtest2';
+import Draw3 from './src/components/navigation/draws/drawtest3';
 
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
