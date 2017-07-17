@@ -1,76 +1,24 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-import {AppRegistry,View, Image, Dimensions,Text} from 'react-native';
-import main from './src/modules/product/product';
-import React from 'react';
-import { DrawerNavigator, DrawerItems } from 'react-navigation';
-import { Icon ,Avatar} from 'react-native-elements';
+'use strict'
+// React
+import React, { Component } from 'react';
+import { AppRegistry } from 'react-native'
+// Redux
+import { Provider } from 'react-redux'
+//*********** COMMENT THE CODE BELOW TO USE STORYBOOK *************/
+// all routes
+import MainRoot from './src/navigation/index'
+// store redux
+import store from './src/store'
+// history
+import { history } from './src/store'
 
-
-import Home from './src/draws/home';
-import Navtest from './src/draws/drawtest';
-import Draw2 from './src/draws/drawtest2';
-import Draw3 from './src/draws/drawtest3';
-
-
-const SCREEN_WIDTH = Dimensions.get('window').width;
-const Avatar_Image = require('./src/images/avaimage.png');
-
-
-const CustomDrawerContentComponent = props => (
-  <View style={{ flex: 1, backgroundColor: '#43484d' }}>
-    <View
-      style={{ marginTop: 20,marginBottom:10, justifyContent: 'center', alignItems: 'center' }}>
-      <Avatar
-        medium
-        rounded
-        source={Avatar_Image}
-        onPress={() => console.log("=>>>>> Avatar Works!")}
-        activeOpacity={0.7}
-      />
-    </View>
-    <DrawerItems {...props} />
-  </View>
-);
-
-const MainRoot = DrawerNavigator(
-  {
-    Home: {
-      path: '/home',
-      screen: Home,
-    },
-    Navtest:{
-      path:'/drawtest',
-      screen:Navtest,
-    },
-    Draw2:{
-      path:'/drawtest2',
-      screen:Draw2,
-    },
-    Draw3:{
-      path:'/drawtest3',
-      screen:Draw3,
-    }
-  },
-  {
-    initialRouteName: 'Home',
-   
-    contentOptions: {
-      activeTintColor: '#548ff7',
-      activeBackgroundColor: 'transparent',
-      inactiveTintColor: '#ffffff',
-      inactiveBackgroundColor: 'transparent',
-      labelStyle: {
-        fontSize: 15,
-        marginLeft: 0,
-      },
-    },
-    drawerWidth: SCREEN_WIDTH * 0.4,
-    contentComponent: CustomDrawerContentComponent,
+export default class PosNavigation extends Component {
+  render(){
+    return(
+      <Provider store={store}>
+        <MainRoot />
+      </Provider>
+    )
   }
-);
-
-AppRegistry.registerComponent('possystem', () => MainRoot);
+}
+AppRegistry.registerComponent('possystem', () => PosNavigation)
