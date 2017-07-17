@@ -14,7 +14,23 @@ const ButtonsTab = StackNavigator({
     path: '/',
     navigationOptions: ({ navigation }) => ({
       title: 'Buttons',
-      
+      tabBarIcon: ({ tintColor, focused }) => (
+          <Icon
+            name={focused ? 'emoticon-cool' : 'emoticon-neutral'}
+            size={30}
+            type="material-community"
+            color={tintColor}
+          />
+        ),
+      headerLeft: (
+        <Icon
+          name="menu"
+          size={30}
+          type="entypo"
+          style={{ paddingLeft: 10 }}
+          onPress={() => navigation.navigate('DrawerOpen')}
+        />
+      ),
     }),
   }
 });
@@ -42,6 +58,20 @@ const Home = TabNavigator(
 
 Home.navigationOptions = {
   drawerLabel: 'Home',
+  drawerIcon: ({ tintColor }) => (
+    <Icon
+      name="home"
+      size={30}
+      style={{
+        width: 50,
+        height: 50,
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+      type="material-commnity"
+      color={tintColor}
+    />
+  ),
 
 };
 

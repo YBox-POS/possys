@@ -1,15 +1,17 @@
 import React from 'react'
 import { Text, Image, View } from 'react-native'
 import styles from './styles'
-import { FormInput } from 'react-native-elements'
+import { Icon } from 'react-native-elements'
 
 
-const SearchImages = ({ imagesa, followImage, unfollowImage }) => (
+const Imgsearch = ({ imagesa, followImage, unfollowImage }) => (
 
-
-<FormInput onChangeText={alert("change")}/>
-
+<View style={styles.iconstyle} >
+  <Icon raised name='list'  color='#f50' size={12}/>
+  <Icon raised name='apps'  color='#f50' size={12}/>
+  <Icon raised name='add'  color='#f50' size={12}/>
+</View>
 
 
 )
-export default SearchImages;
+export default Imgsearch;

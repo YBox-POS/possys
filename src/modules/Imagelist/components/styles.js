@@ -46,7 +46,7 @@ var styles = StyleSheet.create({
   },
 //gridView
   gridView: {
-    paddingTop: 25,
+    paddingTop: 5,
     flex: 1,
   },
   itemContainer: {
@@ -86,7 +86,13 @@ var styles = StyleSheet.create({
     width:108,
     height:30,
     padding:10,
-  }
+  },  
+  iconstyle:{
+    flex:1,
+    flexDirection: 'row',
+    justifyContent:'flex-end',
+    
+  },
 })
 
 module.exports = styles

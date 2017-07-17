@@ -1,17 +1,26 @@
-import React from 'react'
-import { Text, Image, View } from 'react-native'
-import styles from './styles'
-import { Button ,SocialIcon} from 'react-native-elements'
+import React, { Component } from 'react'
+import {ScrollView} from 'react-native'
 
+import Screen from '../../../components/commons/Screen'
+import ExImages from './Images'
 
-const UsuallyImages = ({ imagesa, followImage, unfollowImage }) => (
+class Usuallyimg extends Component {
+  render() {
+    const { imagesa, followImage, unfollowImage } = this.props
+    const wwwe = (Object.values(imagesa))
 
+    return (
+      <ScrollView style={{flex: 1}} horizontal='true'>
+            <Screen>
+              <ExImages
+                imagesa={wwwe}
+                followImage={followImage}
+                unfollowImage={unfollowImage}
+              />
+            </Screen>
+      </ScrollView>
+    )
+  }
+}
 
-<SocialIcon
-  type='twitter'
-/>
-
-
-
-)
-export default UsuallyImages;
+export default Usuallyimg

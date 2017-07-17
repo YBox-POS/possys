@@ -11,7 +11,7 @@ class ImageHome extends Component {
     const wwwe = (Object.values(imagesa))
 
     return (
-      <ScrollView style={{flex: 1,}}>
+      
             <Screen>
               {/* <SearchImages /> */}
               <ExImages
@@ -20,7 +20,6 @@ class ImageHome extends Component {
                 unfollowImage={unfollowImage}
               />
             </Screen>
-      </ScrollView>
     )
   }
 }
