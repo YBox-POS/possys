@@ -50,7 +50,7 @@ const MainRoot = DrawerNavigator(
     // }
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Draw2',
     contentOptions: {
       activeTintColor: '#548ff7',
       activeBackgroundColor: 'transparent',

@@ -2,13 +2,12 @@ import React from 'react'
 import {ScrollView,Text,View} from 'react-native'
 import Screens from '../../components/commons/Screen'
 import {Grid, Row, Col,SearchBar} from 'react-native-elements'
-import Main from '../../modules/Main/mainContainer'
 import ImageHome from '../../modules/Imagelist/ImageContainer'
 import Imgsearch from '../../modules/Imagelist/components/Imgsearch'
 import Formtopicons from '../../modules/Form/components/Formtopicon'
 import Formbottom from '../../modules/Form/components/Formbottom'
 
-
+import Form from '../../modules/Form/FormContainer'
 import Home from '../../modules/Home/homeContainer'
 export default () => (
   <Grid>
@@ -25,7 +24,12 @@ export default () => (
       <Row size={12} >
         <Screens style={{justifyContent: 'flex-end',}}>
           <Imgsearch />
-          <SearchBar lightTheme placeholder='Type Here...' />
+          <SearchBar 
+          lightTheme 
+          placeholder='Search by Product Name.' 
+          onSubmitEditing={(event)=>alert(event.nativeEvent.text)}
+          clearIcon
+          textInputRef={''}/>
         </Screens>
       </Row>
 
@@ -41,23 +45,21 @@ export default () => (
 
 
     <Col size={40}>
-      <Row size={20} >
+      {/* <Row size={20} >
         <Screens >
           <Formtopicons />
         </Screens>
-      </Row>
-      <Row size={60} >
-        <Screens>
-          <Main>
-            <Home />
-          </Main>
-        </Screens>
-      </Row>
-      <Row size={20} >
+      </Row> */}
+      {/* <Row size={60} > */}
+        {/* <Screens> */}
+            <Form />
+        {/* </Screens> */}
+      {/* </Row> */}
+      {/* <Row size={20} >
         <Screens>
           <Formbottom />
         </Screens>
-      </Row>  
+      </Row>   */}
     </Col>
   </Grid>
 )

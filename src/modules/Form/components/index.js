@@ -2,25 +2,25 @@ import React, { Component } from 'react'
 import {ScrollView} from 'react-native';
 
 import Screen from '../../../components/commons/Screen'
-import ExImages from './Users'
+import ExForms from './Forms'
 
-class ImageHome extends Component {
+class FormHome extends Component {
+   componentWillMount() {
+    const { onimageform } = this.props
+    onimageform()
+  } 
   render() {
-    const { imagesa, followImage, unfollowImage } = this.props
-    const wwwe = (Object.values(imagesa))
+    const { formsa } = this.props
+    const wwwe = (Object.values(formsa))
 
     return (
-      <ScrollView style={{flex: 1,}}>
             <Screen>
-              <ExImages
-                imagesa={wwwe}
-                followImage={followImage}
-                unfollowImage={unfollowImage}
+              <ExForms
+                formsa={wwwe}
               />
             </Screen>
-      </ScrollView>
     )
   }
 }
 
-export default ImageHome
+export default FormHome

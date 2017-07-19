@@ -1,7 +1,6 @@
 import { call, put, takeLatest, fork, all } from 'redux-saga/effects'
 import { getImages } from '../../services/user.api'
 import * as imageType from './duck'
-import * as mainType from '../Main/duck'
 
 
 function* getImagesagas(action){

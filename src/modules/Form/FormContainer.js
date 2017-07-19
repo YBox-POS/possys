@@ -1,14 +1,14 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as actions from './duck'
-import ImageHome from './components'
+import ImageForm from './components'
 
 const mapStateToProps = state => ({
-  imagesa: state.image.imagesa
+  formsa: state.form.formsa
 })
 
 const mapDispatchToProps = dispatch => (
   bindActionCreators(actions, dispatch)
 )
 
-export default connect(mapStateToProps, mapDispatchToProps)(ImageHome)
+export default connect(mapStateToProps, mapDispatchToProps)(ImageForm)

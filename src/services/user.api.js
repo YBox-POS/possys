@@ -14,3 +14,4 @@ export const postRequest = (url, data) => (
 
 export const getUsers = () => getRequest('users.api')
 export const getImages = () => getRequest('images.api')
+export const getForms = () => getRequest('images.api')

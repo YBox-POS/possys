@@ -3,7 +3,6 @@ import * as homeType from '../Home/duck'
 import * as imageType from '../Imagelist/duck'
 import * as mainType from './duck'
 import { getUsers } from '../../services/user.api'
-import { axis } from '../../utils'
 
 
 // 初始化APP
@@ -27,10 +26,6 @@ function* initApp() {
       payload: newUsers
     })
 
-    // yield put({
-    //   type:imageType.ON_IMAGES,
-    //   payload: []
-    // })
     yield put({
       type: mainType.APP_INITIALIZED
     })
