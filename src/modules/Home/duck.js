@@ -66,6 +66,7 @@ export const followUser = userId => ({
 })
 
 export const unfollowUser = userId => {
+  alert("unfoloowUser---->"+userId);
   return ({
     type: UNFOLLOW_USER_REQUEST,
     payload: { userId }
@@ -73,6 +74,7 @@ export const unfollowUser = userId => {
 }
 
 export const deleteUser = userId => {
+  alert("delete---->"+userId);
   return ({
     type: DELETE_USER_REQUEST,
     payload: { userId }

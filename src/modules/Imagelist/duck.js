@@ -61,21 +61,28 @@ export default (state = initialState, action) => {
 
 // Action Creators
 
-export const followUser = imageId => ({
+export const followImage = imageId => ({
   type: FOLLOW_IMAGE_REQUEST,
   payload: { imageId }
 })
 
-export const unfollowUser = imageId => {
+export const unfollowImage = imageId => {
   return ({
     type: UNFOLLOW_IMAGE_REQUEST,
     payload: { imageId }
   })
 }
 
-export const deleteUser = userId => {
+export const deleteImage = imageId => {
   return ({
     type: DELETE_IMAGE_REQUEST,
     payload: { imageId }
+  })
+}
+
+export const ongetimages = imageId => {
+  return ({
+    type: ON_IMAGES,
+
   })
 }

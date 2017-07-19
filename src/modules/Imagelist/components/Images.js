@@ -10,6 +10,7 @@ const ExImages = ({ imagesa, followImage, unfollowImage }) => (
     itemWidth={103}
     items={imagesa}
     style={styles.gridView}
+    enableEmptySections={true}
     renderItem={item => (
       <View style={styles.itemContainer}>          
         <Image

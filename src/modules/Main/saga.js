@@ -5,7 +5,6 @@ import * as mainType from './duck'
 import { getUsers } from '../../services/user.api'
 import { axis } from '../../utils'
 
-console.log('数据类型---->>>>>>>',axis(999))
 
 // 初始化APP
 function* initApp() {
@@ -28,10 +27,10 @@ function* initApp() {
       payload: newUsers
     })
 
-    yield put({
-      type:imageType.ON_IMAGES,
-      payload: []
-    })
+    // yield put({
+    //   type:imageType.ON_IMAGES,
+    //   payload: []
+    // })
     yield put({
       type: mainType.APP_INITIALIZED
     })

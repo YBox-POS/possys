@@ -2,91 +2,62 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 
 var styles = StyleSheet.create({
-  //import Swipeout
-  container: {
-    backgroundColor: '#f2f2f2',
-    flex: 1,
+  iconstyle:{
+    flex:1,
+    flexDirection: 'row',
+    justifyContent:'flex-end',
   },
-  listview: {
-    flex: 1,
+  FormView:{
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    marginBottom:6
   },
-  li: {
-    backgroundColor: '#fff',
-    borderBottomColor: '#eee',
-    borderColor: 'transparent',
-    borderWidth: 1,
-    paddingLeft: 16,
-    paddingTop: 14,
-    paddingBottom: 16,
+  FormViewGrand:{
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    marginTop:8
   },
-  liContainer: {
-    flex: 2,
-  },
-  liText: {
-    color: '#333',
+  Subtotalfont:{
     fontSize: 16,
   },
-  navbar: {
-    alignItems: 'center',
-    backgroundColor: '#fff',
-    borderBottomColor: '#eee',
-    borderColor: 'transparent',
-    borderWidth: 1,
-    justifyContent: 'center',
-    height: 44,
+  Valfont:{
+    color:'#6B6E6E',
+    fontSize:16,
   },
-  navbarTitle: {
-    color: '#444',
-    fontSize: 30,
-    fontWeight: "800",
+  Grandfont:{
+    fontSize:20,
+    fontWeight: "700",
   },
-  statusbar: {
-    backgroundColor: '#fff',
-    height: 22,
+  SubtotalfontRt:{
+    fontSize: 18,
+    fontWeight: "600",
   },
-//gridView
-  gridView: {
-    paddingTop: 25,
-    flex: 1,
+  ValfontRt:{
+    color:'#6B6E6E',
+    fontSize: 16,
+    fontWeight: "700",
   },
-  itemContainer: {
-    justifyContent: 'flex-end',
-    borderRadius: 5,
-    padding: 10,
-    height: 125,
+  GrandfontRt:{
+    fontSize: 20,
+    fontWeight: "700",
   },
-  itemName: {
-    fontSize: 10,
-    color: '#4c4d4e',
-    fontWeight: '900',
-    textAlign: 'center'
+  FormButtonView:{
+    marginLeft:-15,
+    flexDirection: 'row',
+    justifyContent:'space-between',
   },
-  itemCode: {
-    fontWeight: '600',
-    fontSize: 12,
-    color: '#fff',
+  FormButtoncolorlf:{
+    paddingLeft:45,
+    paddingRight:45,
+    backgroundColor:'#5595D1'
   },
-  imagesize:{
-    width: 108, 
-    height: 85,
-    
-  },
-  texttop:{
-    width: 100, 
-    height: 100
-  },
-  textbottom:{
-    width: 100, 
-    height: 100
-  },
-  testview:{
-    backgroundColor:'#b7b8b9',
-    borderBottomLeftRadius: 5,
-    borderBottomRightRadius:5,
-    width:108,
-    height:30,
-    padding:10,
+  FormButtoncolorrt:{
+    paddingLeft:63,
+    paddingRight:63,
+    backgroundColor:'#5595D1'
   }
+
 })
+
 
 module.exports = styles

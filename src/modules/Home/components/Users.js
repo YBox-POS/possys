@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, ScrollView, Image, View, StyleSheet, Dimensions } from 'react-native';
 import styled from 'styled-components/native';
 import { List, ListItem, Button} from 'react-native-elements';
+import * as action from "../duck"
 
 //获取屏幕宽高
 const SCREEN_WIDTH = Dimensions.get('window').width;
@@ -14,7 +15,7 @@ const Users = ({ users, followUser, unfollowUser }) => (
     }}
     contentContainerStyle={{ marginBottom:100 }}
   >
-    <Image style={styles.images} source={require('../../../asset/img/a.gif')}  />
+    {/* <Image style={styles.images} source={require('../../../asset/img/a.gif')}  /> */}
     
     {Object.values(users).map(({ id, name, username, following }) => (
       <ListItem
@@ -23,13 +24,13 @@ const Users = ({ users, followUser, unfollowUser }) => (
         key={`user-${id}`}
         onPress={() => {console.log('你点击的是列表'+id)}}
         leftIcon={
-          <Button
+          {/* <Button
             color={"#fff"}
             iconRight
             buttonStyle={{backgroundColor: '#00D9C7', borderRadius: 5}}
-            onPress={() => {}}
+            onPress={() => (action.deleteUser(id))}
             title={"删除"}
-          /> 
+          />  */}
         }
         rightIcon={
           <Button
@@ -42,13 +43,13 @@ const Users = ({ users, followUser, unfollowUser }) => (
         }
       />
     ))}
-    <Button
+    {/* <Button
       color={"#fff"}
       iconRight
       buttonStyle={{backgroundColor: '#FF557C', borderRadius: 5, marginTop:20}}
       onPress={() => {alert("屏幕宽度："+SCREEN_WIDTH+"\n屏幕高度："+SCREEN_HEIGHT)}}
       title={"获取屏幕宽度"}
-    /> 
+    />  */}
 
   </ScrollView>
 )

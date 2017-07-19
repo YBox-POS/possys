@@ -3,17 +3,20 @@ import {ScrollView} from 'react-native'
 
 import Screen from '../../../components/commons/Screen'
 import ExImages from './Images'
-import SearchImages from './Imgsearch'
+import ExListImages from './ListImages'
 
 class ImageHome extends Component {
+  
+  componentWillMount() {
+    const { ongetimages } = this.props
+    ongetimages()
+  }
   render() {
     const { imagesa, followImage, unfollowImage } = this.props
     const wwwe = (Object.values(imagesa))
 
     return (
-      
             <Screen>
-              {/* <SearchImages /> */}
               <ExImages
                 imagesa={wwwe}
                 followImage={followImage}
